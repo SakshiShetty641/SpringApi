@@ -10,9 +10,11 @@ public class JunitPracticeTest {
 
     @Test
     void shouldReturnSumOfThreeNos() {
-        int[] numbers = {5, 2};
-        int sum = junitPractice.calculateSum(numbers);
-        int expectedResult = 7;
-        assertEquals(expectedResult, sum);
+        assertEquals(7, junitPractice.calculateSum(new int[]{5, 2}));
+    }
+
+    @Test
+    void shouldReturnSumOfEmptyArray() {
+        assertEquals(0, junitPractice.calculateSum(new int[]{}));
     }
 }
